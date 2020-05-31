@@ -1,0 +1,16 @@
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 as builder
+
+RUN mkdir -p /root/src/app
+WORKDIR /root/src/app
+COPY SpeedTest SpeedTest
+
+WORKDIR /root/src/app/SpeedTest
+
+RUN dotnet publish -c release -o published -r win-x64
+
+FROM mcr.microsoft.com/dotnet/core/???wont work with docker for linux
+
+WORKDIR /root/
+COPY --from=builder /root/src/app/SpeedTest/published .
+
+CMD SpeedTest.Client.exe

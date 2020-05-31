@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpeedTest.Client.Console", "SpeedTest.Client.Console\SpeedTest.Client.Console.csproj", "{B882DEB5-640C-40AF-916F-29DBC43677C1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{357B7DAE-A974-40EF-B988-4D5F8BDF3EDF} = {357B7DAE-A974-40EF-B988-4D5F8BDF3EDF}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpeedTest.Client.Model", "SpeedTest.Client.Model\SpeedTest.Client.Model.csproj", "{357B7DAE-A974-40EF-B988-4D5F8BDF3EDF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B882DEB5-640C-40AF-916F-29DBC43677C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B882DEB5-640C-40AF-916F-29DBC43677C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B882DEB5-640C-40AF-916F-29DBC43677C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B882DEB5-640C-40AF-916F-29DBC43677C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{357B7DAE-A974-40EF-B988-4D5F8BDF3EDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{357B7DAE-A974-40EF-B988-4D5F8BDF3EDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{357B7DAE-A974-40EF-B988-4D5F8BDF3EDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{357B7DAE-A974-40EF-B988-4D5F8BDF3EDF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ADA2D7DA-620A-431E-9C20-552B068FC057}
+	EndGlobalSection
+EndGlobal

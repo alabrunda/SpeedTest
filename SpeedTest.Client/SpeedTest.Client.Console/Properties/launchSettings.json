@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "SpeedTest.Client.Console": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

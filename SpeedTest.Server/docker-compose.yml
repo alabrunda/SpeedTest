@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+  speedtest.server.webapi:
+    image: ${DOCKER_REGISTRY-}speedtest.server.webapi
+    build:
+      context: .
+      dockerfile: SpeedTest.Server.WebAPI/Dockerfile
+    depends_on:
+      - "speedtest.server.database"
+    ports:
+      -  "8080:80"
+  speedtest.server.database:
+    image: mcr.microsoft.com/mssql/server:2019-CU4-ubuntu-16.04
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "MySAPA55"
+      MSSQL_PID: Express
+    ports:
+      - "1433:1433"    

@@ -1,0 +1,16 @@
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 as builder
+
+RUN mkdir -p /root/src/app
+WORKDIR /root/src/app
+COPY . SpeedTest
+
+WORKDIR /root/src/app/SpeedTest
+
+RUN dotnet publish -c release -o published -r linux-arm
+
+FROM mcr.microsoft.com/dotnet/core/runtime:3.1.4-bionic-arm32v7
+
+WORKDIR /root/
+COPY --from=builder /root/src/app/SpeedTest/published .
+
+CMD ["dotnet", "./SpeedTest.Client.Console.dll"]
